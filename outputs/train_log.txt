@@ -1,0 +1,56 @@
+rows {'train': 345439, 'val': 22991, 'test': 46041, 'sites': 65, 'counties': 30}
+fitting ridge
+fitting mlp
+fitting hgb
+tuning svr
+best (by val RMSE): mlp {'rmse': 0.004448709642419749, 'mae': 0.003541771321618952, 'r2': 0.8236355125259002}
+{
+ "best_model": "mlp",
+ "ablation_no_lag": {
+  "rmse": 0.005298529003654365,
+  "mae": 0.0042288041619903535,
+  "r2": 0.7498193882624717
+ },
+ "daily_exceedance": {
+  "threshold": 0.37999999999999995,
+  "base_rate_test": 0.023739710258248083,
+  "classifier": {
+   "accuracy": 0.9804304858712887,
+   "precision": 0.583916083916084,
+   "recall": 0.6111619396157365,
+   "f1": 0.597228430934287,
+   "roc_auc": 0.9843365202900723,
+   "pr_auc": 0.6366280958747855
+  },
+  "from_regression": {
+   "accuracy": 0.982624182793597,
+   "precision": 0.7132459970887919,
+   "recall": 0.44830741079597436,
+   "f1": 0.550561797752809
+  }
+ },
+ "county_year_regression": {
+  "accuracy": 0.9555555555555556,
+  "precision": 0.9545454545454546,
+  "recall": 0.9545454545454546,
+  "f1": 0.9545454545454546
+ },
+ "county_year_exceedance_count": {
+  "accuracy": 0.9444444444444444,
+  "precision": 0.9534883720930233,
+  "recall": 0.9318181818181818,
+  "f1": 0.9425287356321839,
+  "roc_auc": 0.9925889328063241,
+  "pr_auc": 0.9923897506918995
+ },
+ "county_dv_2017": {
+  "n": 30,
+  "accuracy": 0.9666666666666667,
+  "precision": 1.0,
+  "recall": 0.9285714285714286,
+  "f1": 0.9629629629629629,
+  "dv_mae_ppm": 0.0007857114691505104,
+  "tier_exact": 0.9333333333333333,
+  "tier_within_1": 1.0
+ }
+}
